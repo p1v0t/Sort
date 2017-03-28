@@ -1,0 +1,29 @@
+﻿  utils.c
+  test.c
+  shell.c
+  selection.c
+  quickL.c
+  qsort3way.c
+  qsortH.c
+  mergeSort.c
+  insertion.c
+  heapSort.c
+c:\users\pc\dropbox\blog\sort\sort\heapsort.c(12): warning C4018: '<' : signed/unsigned mismatch
+c:\users\pc\dropbox\blog\sort\sort\heapsort.c(14): warning C4018: '<' : signed/unsigned mismatch
+c:\users\pc\dropbox\blog\sort\sort\heapsort.c(26): warning C4018: '<' : signed/unsigned mismatch
+c:\users\pc\dropbox\blog\sort\sort\heapsort.c(28): warning C4018: '<' : signed/unsigned mismatch
+  gnome.c
+  demo.c
+c:\users\pc\dropbox\blog\sort\sort\demo.c(23): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+c:\users\pc\dropbox\blog\sort\sort\demo.c(26): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+c:\users\pc\dropbox\blog\sort\sort\demo.c(30): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+  comb.c
+c:\users\pc\dropbox\blog\sort\sort\comb.c(16): warning C4244: '/=' : conversion from 'const float' to 'size_t', possible loss of data
+  cocktail.c
+  bubble.c
+  bogo.c
+  Generating Code...
+  Sort.vcxproj -> C:\Users\PC\Dropbox\Blog\Sort\Debug\Sort.exe
