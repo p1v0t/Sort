@@ -22,7 +22,7 @@ static int cmp(const void *a, const void *b){
 
  ------
 
-| Sort       			                                                | Worst Case    | Average Case   	| Best Caase        | 
+| Sort       			                                                | Worst Case    | Average Case   	| Best Case        | 
 | -------------			 |:-------------: |:-------------:													| -----:		    |
 |  [Bogo](https://en.wikipedia.org/wiki/Bogosort)   					| O((n+1)!)	|O((n+1)!)		  	 | O(n)					|
 |  [Bubble](https://en.wikipedia.org/wiki/Bubble_sort)   				| O(n<sup>2</sup>)|	O(n<sup>2</sup>) | O(n)				|
