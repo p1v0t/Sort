@@ -5,6 +5,8 @@
 #include <time.h>
 #include <math.h>
 
+#include "utils.h"
+
 #include "bogo.h"
 #include "bubble.h"
 #include "gnome.h"
@@ -13,9 +15,9 @@
 #include "insertion.h"
 #include "shell.h"
 #include "mergeSort.h" //mergeSort //!!
-#include "quick3way.h"  // qsort3way // !!
-#include "quick.h" // quickSort  //OK
-#include "quickL.h" // quickSortL  // OK
+#include "qsort3way.h"  // qsort3way // !!
+#include "qsortH.h" // quickSort  //OK
+#include "qsortL.h" // quickSortL  // OK
 #include "heapSort.h" // OK
 
 
@@ -57,101 +59,38 @@ static int cmpChar(const void *a, const void *b){
 		return -1;
 }
 
-static double tictoc(clock_t tic, clock_t toc){
-	return (double)(toc -tic)/CLOCKS_PER_SEC;
+/*
+#include "bogo.h"
+#include "bubble.h"
+#include "gnome.h"
+#include "cocktail.h"
+#include "selection.h"
+#include "insertion.h"
+#include "shell.h"
+#include "mergeSort.h" //mergeSort //!!
+#include "quick3way.h"  // qsort3way // !!
+#include "quick.h" // quickSort  //OK
+#include "quickL.h" // quickSortL  // OK
+#include "heapSort.h" // OK
+*/
+void print(int a[], const int SIZE) {
+	for(size_t i = 0; i < SIZE; i++)
+		printf("%d ",  a[i]);
+
+	printf("\n");
 }
-
-
-void doWork(void){
-	//const long int length[] = {1000, 10000, 100000, 1000000, 10000000, 100000000};
-	const int size =320;
-	int i ,j;
-	clock_t tic, toc;
-	double result; 
-
-	int **basicSorts;
-
-	for(i = 0; i < 5; i++){
-		basicSorts = (int**)calloc(i, sizeof(int*));
-		for (j = 0; j < size; j++)
-			basicSorts[i] = (int *)calloc(size, sizeof(int));
-	}
-
-	randomize();
-
-	for(i=0; i< size; i++){ //already sorted
-		basicSorts[0][size] =
-		basicSorts[1][size] =
-		basicSorts[2][size] =
-		basicSorts[3][size] =
-		basicSorts[4][size] =
-		basicSorts[5][size] = rand();
-	}
-
-	//tic =clock(); bubbleSort_naive(&basicSorts[0][size], size, sizeof(int), cmpInt); toc =clock(); 
-	//result = tictoc(tic, toc);
-	//printf("%.10lf\n", result);
-
-	//tic =clock(); bubbleSort(&basicSorts[1][size], size, sizeof(int), cmpInt); toc =clock(); 
-	//result = tictoc(tic, toc);
-	//printf("%.10lf\n", result);
-
-	//tic =clock(); cocktailShakerSort(&basicSorts[2][size], size, sizeof(int), cmpInt); toc =clock(); 
-	//result = tictoc(tic, toc);
-	//printf("%.10lf\n", result);
-
-	//tic =clock(); selectionSort(&basicSorts[3][size], size, sizeof(int), cmpInt); toc =clock(); 
-	//result = tictoc(tic, toc);
-	//printf("%.10lf\n", result);
-
-	//tic =clock(); insertionSort(&basicSorts[4][size], size, sizeof(int), cmpInt); toc =clock(); 
-	//result = tictoc(tic, toc);
-	//printf("%.10lf\n", result);
-
-	//tic =clock(); shellSort(&basicSorts[4][size], size, sizeof(int), cmpInt); toc =clock(); 
-	//result = tictoc(tic, toc);
-	//printf("%.10lf\n", result);
-
-	//	tic =clock(); quickSort(&basicSorts[3][size],0 , size-1, sizeof(int), cmpInt); toc =clock(); 
-	//result = tictoc(tic, toc);
-	//printf("%.10lf\n", result);
-
-	//	tic =clock(); quickSortL(&basicSorts[4][size], 0, size-1, sizeof(int), cmpInt); toc =clock(); 
-	//result = tictoc(tic, toc);
-	//printf("%.10lf\n", result);
-
-	//tic =clock(); heapSort(&basicSorts[4][size], size, sizeof(int), cmpInt); toc =clock(); 
-	//result = tictoc(tic, toc);
-	//printf("%.10lf\n", result);
-
-	tic =clock(); gnomeSort(&basicSorts[4][size], size, sizeof(int), cmpInt); toc =clock(); 
-	result = tictoc(tic, toc);
-	printf("%.10lf\n", result);
-
-
-
-
-
-
-	for(i = 0; i < 5; i++){
-		for (j = 0; j < size; j++)
-			free(&basicSorts[i][j]);
-		free(basicSorts[i]);
-	}
-
-		
-	/*bubbleSort(&basicSorts[0][size], 1000, sizeof(int), cmpInt);
-	cocktailShakerSort(&basicSorts[1][size], 1000, sizeof(int), cmpInt);
-	selectionSort(&basicSorts[2][size], 1000, sizeof(int), cmpInt);
-	insertionSort(&basicSorts[3][size], 1000, sizeof(int), cmpInt);
-	shellSort(&basicSorts[4][size], 1000, sizeof(int), cmpInt);*/
-}
-
 
 int main(void){
+	const int nelem  = 10;
+	int a[] = {4,1, 3,9, 12, 11, 13, 8, 0, 110 };
+	int *b = malloc(sizeof(int) * nelem);
 
-	doWork();
-
+	copy(b, a, nelem );
+		
+	//bubbleSort_naive(a, SIZE,  sizeof(int); cmpInt);
+      	print(b, nelem);
+	
+		
 	return 0;	
 }
 
