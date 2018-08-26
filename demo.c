@@ -27,7 +27,7 @@ int main(void)
 		fprintf(stderr,"file couldn't opened %d", __LINE__);
 
 	for(i =0; !feof(f); i++)
-		fscanf(f, "%s%d" ,gdpRank[i].n, &gdpRank[i].m);
+		fscanf(f, "%s%ld" ,gdpRank[i].n, &gdpRank[i].m);
 	
 	qsortH(gdpRank,0, i, sizeof(Country), cmp);
 
@@ -37,7 +37,7 @@ int main(void)
 	fprintf(o,"\n%s%11s%40s\n\n\n","Rank"," Economy", "(millions of Economy US dollars)");
 
 	for(j =0; j <i; j++)		
-		fprintf(o,"%-7d %-27s %d\n", j, gdpRank[j].n, gdpRank[j].m);
+		fprintf(o,"%-7d %-27s %ld\n", j, gdpRank[j].n, gdpRank[j].m);
 
 	fclose(o);
 	fclose(f);

@@ -1,4 +1,4 @@
-# Readme - Sort
+# Sort
 Some of comparision based sorting algorithms implemented in generic form using C
  ## Usage
  You can use any of these implementation by including to the source. Most of algorithms implemented std qsort() fashion
