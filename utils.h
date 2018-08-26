@@ -5,7 +5,7 @@
 #include <assert.h>
 #include <stdlib.h>
 
-typedef char byte;
+typedef unsigned char byte;
 
 #ifdef __cplusplus
 extern "C"{
