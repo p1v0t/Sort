@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/adem/Desktop/Sort/src/bubble.c
+bubble.h
+/home/adem/Desktop/Sort/src/bubble.h
+utils.h
+/home/adem/Desktop/Sort/src/utils.h
+
+/home/adem/Desktop/Sort/test/BubbleTest/bubble.h
+stddef.h
+-
+
+/home/adem/Desktop/Sort/test/BubbleTest/bubbleTest.c
+bubble.h
+/home/adem/Desktop/Sort/test/BubbleTest/bubble.h
+stdio.h
+-
+stdlib.h
+-
+

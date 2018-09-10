@@ -1,0 +1,3 @@
+/home/adem/Desktop/Sort/test/BubbleTest/build/CMakeFiles/rebuild_cache.dir
+/home/adem/Desktop/Sort/test/BubbleTest/build/CMakeFiles/edit_cache.dir
+/home/adem/Desktop/Sort/test/BubbleTest/build/CMakeFiles/output.dir

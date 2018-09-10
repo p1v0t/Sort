@@ -1,0 +1,1 @@
+/usr/bin/cc     CMakeFiles/output.dir/home/adem/Desktop/Sort/src/bubble.c.o CMakeFiles/output.dir/bubbleTest.c.o  -o output 
