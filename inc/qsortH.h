@@ -1,6 +1,8 @@
 #ifndef QUICK_H
 #define QUICK_H
+
 #include <stddef.h>
+#include "utils.h"
 
 #ifdef __cplusplus
 extern "C"{

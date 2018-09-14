@@ -1,7 +1,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "qsort3way.h"
+#include "qsortL.h"
 
 typedef struct country {char n[50]; long m;} Country;
 
@@ -31,7 +31,7 @@ int main(void)
 	for(i =0; !feof(f); i++)
 		fscanf(f, "%s%ld" ,gdpRank[i].n, &gdpRank[i].m);
 	
-	qsort3way(gdpRank,i, sizeof(Country), cmp);
+	qsortL(gdpRank, 0, i, sizeof(Country), cmp);
 
 	//source : http://databank.worldbank.org/data/download/GDP.pdf
 

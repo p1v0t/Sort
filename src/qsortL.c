@@ -1,5 +1,4 @@
 #include "qsortL.h"
-#include "utils.h"
 
 size_t LomutoPartition (void *base, size_t lo, size_t hi, size_t size, int (*cmp)(const void *,const void *) ){
 	char *ptr = (char*)base;

@@ -1,6 +1,8 @@
 #ifndef MERGESORT_H
 #define MERGESORT_H
+
 #include <stddef.h>
+#include "utils.h"
 
 #ifdef __cplusplus
 extern "C"{

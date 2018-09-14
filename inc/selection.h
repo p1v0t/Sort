@@ -1,6 +1,8 @@
 #ifndef SELECTION_H
 #define SELECTION_H
+
 #include <stddef.h>
+#include "utils.h"
 
 #ifdef __cplusplus
 extern "C"{

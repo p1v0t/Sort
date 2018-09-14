@@ -1,6 +1,7 @@
 #ifndef INSERTION_H
 #define INSERTION_H
 #include <stddef.h>
+#include "utils.h"
 
 #ifdef __cplusplus
 extern "C"{

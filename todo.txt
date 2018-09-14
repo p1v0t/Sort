@@ -1,6 +1,0 @@
-- mergesort -checked-
-- heapsort 
-- quicksort iterative
-- quicksort Lomuto partition -checked-
-- 3 way quicksort -checked-
-- demo runtime comparison

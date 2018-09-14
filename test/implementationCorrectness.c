@@ -4,9 +4,11 @@
 #include "gnome.h"
 #include "heapSort.h"
 #include "insertion.h"
-#include "shell.h"
+#include "qsortH.h"
+#include "qsortL.h"
 #include "qsort3way.h"
 #include "selection.h"
+#include "shell.h"
 
 #include <stdbool.h>
 
@@ -222,7 +224,6 @@ int main(void) {
 	    "\nFinished testing correctness of Shell Sort "
 	    "implementation\n\n");
 
-	
 	RANDOMIZE();
 
 	printf(
@@ -246,6 +247,28 @@ int main(void) {
 	    "\nFinished testing correctness of Selection Sort "
 	    "implementation\n\n");
 
+	RANDOMIZE();
+
+	printf(
+	    "Started testing correctness of Merge Sort "
+	    "implementation\n");
+	mergeSort(d, ARRAYSIZE, sizeof(*d), cmp_func);
+
+	if (!isSorted(d, ARRAYSIZE)) {
+		printf(
+		    "Something is wrong with the "
+		    "implementation\n");
+		printf("Some output: ");
+		for (size_t i = 0; i < 5; i++) printf("%lf ", d[i]);
+	} else {
+		printf("Implementation is correct\n");
+		printf("Some output: ");
+		for (size_t i = 0; i < 5; i++) printf("%lf ", d[i]);
+	}
+
+	printf(
+	    "\nFinished testing correctness of Merge Sort "
+	    "implementation\n\n");
 
 	RANDOMIZE();
 
@@ -270,6 +293,52 @@ int main(void) {
 	    "\nFinished testing correctness of 3 Way Quick Sort "
 	    "implementation\n\n");
 
+	RANDOMIZE();
+
+	printf(
+	    "Started testing correctness of Quick Sort with Lomute partition "
+	    "implementation\n");
+	qsortL(d, 0, ARRAYSIZE, sizeof(*d), cmp_func);
+
+	if (!isSorted(d, ARRAYSIZE)) {
+		printf(
+		    "Something is wrong with the "
+		    "implementation\n");
+		printf("Some output: ");
+		for (size_t i = 0; i < 5; i++) printf("%lf ", d[i]);
+	} else {
+		printf("Implementation is correct\n");
+		printf("Some output: ");
+		for (size_t i = 0; i < 5; i++) printf("%lf ", d[i]);
+	}
+
+	printf(
+	    "\nFinished testing correctness of Quick Sort with Lomute "
+	    "partition "
+	    "implementation\n\n");
+
+	RANDOMIZE();
+
+	printf(
+	    "Started testing correctness of Quick Sort with Hoare partition "
+	    "implementation\n");
+	qsortH(d, 0, ARRAYSIZE, sizeof(*d), cmp_func);
+
+	if (!isSorted(d, ARRAYSIZE)) {
+		printf(
+		    "Something is wrong with the "
+		    "implementation\n");
+		printf("Some output: ");
+		for (size_t i = 0; i < 5; i++) printf("%lf ", d[i]);
+	} else {
+		printf("Implementation is correct\n");
+		printf("Some output: ");
+		for (size_t i = 0; i < 5; i++) printf("%lf ", d[i]);
+	}
+
+	printf(
+	    "\nFinished testing correctness of Quick Sort with Hoare partition "
+	    "implementation\n\n");
 
 	return 0;
 }

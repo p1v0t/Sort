@@ -1,5 +1,4 @@
 #include "cocktail.h"
-#include "utils.h"
 
 void cocktailShakerSort(void *base, size_t num , size_t size, int (*cmp)(const void *, const void*) ){
 	byte *pbBase =(byte*)base;

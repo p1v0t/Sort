@@ -1,6 +1,8 @@
 #ifndef SHELL_H
 #define SHELL_H
+
 #include <stddef.h>
+#include "utils.h"
 
 #ifdef __cplusplus
 extern "C"{

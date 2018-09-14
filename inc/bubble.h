@@ -2,6 +2,8 @@
 #define BUBBLE_H
 #include <stddef.h>
 
+#include "utils.h"
+
 #ifdef __cplusplus
 extern "C"{
 #endif

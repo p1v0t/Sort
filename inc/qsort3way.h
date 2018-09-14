@@ -1,6 +1,8 @@
 #ifndef QSORT3WAY_H
 #define QSORT3WAY_H
+
 #include <stddef.h>
+#include "utils.h"
 
 #ifdef __cplusplus
 extern "C"{

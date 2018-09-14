@@ -1,5 +1,4 @@
 #include "mergeSort.h"
-#include "utils.h"
 #include <stdlib.h>
 
 void merge(void *base, size_t lo, size_t hi, size_t size, int (*cmp)(const void *, const void*) ){

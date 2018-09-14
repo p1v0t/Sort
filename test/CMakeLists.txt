@@ -1,10 +1,11 @@
-cmake_minimum_required(VERSION 3.7.2) 
-project(BubbleTest, LANGUAGES C)
+# to run the code
+# $ mkdir build && cd build
+# cmake ..
+# make
 
-if(NOT CMAKE_BUILD_TYPE)
-	set(CMAKE_BUILD_TYPE Debug CACHE STRING "" FORGE)
-endif()
- 
+cmake_minimum_required(VERSION 3.7.2) 
+project(Test, LANGUAGES C)
+
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CFLAGS "$(CMAKE_C_FLAGS) --std=c11 -Wall")
 
@@ -31,7 +32,13 @@ add_executable (output
 	${SOURCE_DIR}/shell.c
 	${INCLUDE_DIR}/selection.h
 	${SOURCE_DIR}/selection.c
+	${INCLUDE_DIR}/mergeSort.h
+	${SOURCE_DIR}/mergeSort.c
 	${INCLUDE_DIR}/qsort3way.h
 	${SOURCE_DIR}/qsort3way.c
+	${INCLUDE_DIR}/qsortH.h
+	${SOURCE_DIR}/qsortH.c
+	${INCLUDE_DIR}/qsortL.h
+	${SOURCE_DIR}/qsortL.c
 	implementationCorrectness.c
 )

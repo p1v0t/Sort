@@ -1,5 +1,4 @@
 #include "comb.h"
-#include "utils.h"
 
 void combSort(void *base, size_t num, size_t size, int (*cmp)(const void *,const void *) ){
     byte *pbBase =(byte*)base;
