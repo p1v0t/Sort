@@ -11,9 +11,9 @@ void heapSort(void *base, size_t num, size_t size, int (*cmp)(const void *, cons
 	while(i >=0){
 		for (r =i; r*2 +size <n; r =c) {
 			c =r*2 +size;
-			if (c < n -size && cmp(pbBase +c, pbBase +c +size) >= 0)
+			if (c < n -size && cmp(pbBase +c, pbBase +c +size) <= 0)
 				c +=size;
-			if (cmp (pbBase +r, pbBase +c) <0)
+			if (cmp (pbBase +r, pbBase +c) >0)
 				break;
 			swap(pbBase +r, pbBase +c, size);
 		}
@@ -25,9 +25,9 @@ void heapSort(void *base, size_t num, size_t size, int (*cmp)(const void *, cons
 
 		for (r =0; r*2 +size < i; r =c) {
 			c =r*2 +size;
-			if (c < i -size && cmp(pbBase +c, pbBase +c +size) >= 0)
+			if (c < i -size && cmp(pbBase +c, pbBase +c +size) <= 0)
 				c +=size;
-			if (cmp(pbBase +r, pbBase +c) <0)
+			if (cmp(pbBase +r, pbBase +c) >0)
 				break;
 			swap(pbBase +r, pbBase +c, size);
 		}
