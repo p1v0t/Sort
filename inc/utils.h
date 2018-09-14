@@ -20,21 +20,9 @@ extern "C"{
 #define false 0
 #endif
 
-	void swap(unsigned char *x, unsigned char *y, size_t size) {
-	    while (size-- > 0) {
-		unsigned char c = *x;
-		*x++ = *y;
-		*y++ = c;
-	    }
-	}
+	extern inline void swap(unsigned char *, unsigned char *, size_t size);
 
-	void copy(void *x, void *y, size_t size){
-	    while (size-- > 0) {
-		byte *pbTo = (byte*)x;
-		byte *pbFrom = (byte*)y;
-		*pbTo++ = *pbFrom++;
-	    }
-	}
+	extern inline void copy(void *, void *, size_t );
 
 #ifdef __cplusplus
 }
