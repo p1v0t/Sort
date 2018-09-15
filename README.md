@@ -6,22 +6,23 @@ You can use any of these implementation by including to the source. Most of algo
 ``` void qsort( void *ptr, size_t count, size_t size, int (*cmp)(const void *, const void *) ) ```
  
 If you want to use insertion sort for example, you should try
-```void insertionSort( void *ptr, size_t count, size_t size, int (*cmp)(const void *, const void *) )```
-where ```ptr``` is pointer to array, ```count``` is number of elements in the array, ```size``` is size of
- every single element of the array, ```cmp``` is comparision function, an function pointer to int. 
 
-You can use following comparision function:
+``` void insertionSort( void *ptr, size_t count, size_t size, int (*cmp)(const void *, const void *) ) ```
 
-```
-#define TYPE int
+where
 
-static int cmp(const void *a, const void *b){
-  const TYPE da = *((const TYPE *) a);
-  const TYPE db = *((const TYPE *) b);
-  
-  return (da < db) ? 1 : (da == db) ? 0 : -1;
-}
-```
+- `ptr` is pointer to array
+- `count` is number of elements in the array
+- `size` is size of every single element of the array
+- `cmp` is comparision function, an function pointer that takes two const
+ pointer to void and return an integer -1, +1, 0 similar to `strcmp`
+
+
+To see empirical implementation correctness tests, go to test/ directory and run following commands:
+
+$ mkdir build && cd build
+$ cmake ..
+$ make
 
  ------
 
