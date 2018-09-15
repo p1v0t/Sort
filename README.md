@@ -20,10 +20,11 @@ where
 
 To see empirical implementation correctness tests, go to test/ directory and run following commands:
 
+```shell
 $ mkdir build && cd build
 $ cmake ..
 $ make
-
+```
  ------
 
 | Sort   | Worst Case    | Average Case   	| Best Case        | 
