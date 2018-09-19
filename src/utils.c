@@ -1,10 +1,10 @@
 #include "utils.h"
 
-extern inline void swap(unsigned char *x, unsigned char *y, size_t size) {
+extern inline void swap(byte *x, byte *y, size_t size) {
     while (size-- > 0) {
-	unsigned char c = *x;
+	byte tmp = *x;
 	*x++ = *y;
-	*y++ = c;
+	*y++ = tmp;
     }
 }
 
