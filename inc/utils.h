@@ -4,8 +4,9 @@
 #include <stddef.h>
 #include <assert.h>
 #include <stdlib.h>
+#include <stdint.h>
 
-typedef unsigned char byte;
+typedef uint8_t byte;
 
 #ifdef __cplusplus
 extern "C"{
