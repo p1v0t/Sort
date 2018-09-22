@@ -3,14 +3,14 @@
 #include <stddef.h>
 
 #ifdef __cplusplus
-extern "C"{
+extern "C" {
 #endif
 
-	void suffle(void *, size_t, size_t);
+void suffle(void *, size_t, size_t);
 
-	int sorted(void *, size_t, size_t, int (*)(const void *,const void *));
+int sorted(void *, size_t, size_t, int (*)(const void *, const void *));
 
-	void bogoSort(void *, size_t, size_t, int (*)(const void *,const void *));
+void bogoSort(void *, size_t, size_t, int (*)(const void *, const void *));
 
 #ifdef __cplusplus
 }

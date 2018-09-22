@@ -5,10 +5,18 @@
 #include "utils.h"
 
 #ifdef __cplusplus
-extern "C"{
+extern "C" {
 #endif
-	size_t partition (void *, size_t, size_t, size_t, int (*)(const void *,const void *) );
-	void qsortH(void *, size_t, size_t, size_t, int (*)(const void *,const void *) );
+size_t partition(void *,
+                 size_t,
+                 size_t,
+                 size_t,
+                 int (*)(const void *, const void *));
+void qsortH(void *,
+            size_t,
+            size_t,
+            size_t,
+            int (*)(const void *, const void *));
 
 #ifdef __cplusplus
 }

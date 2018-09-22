@@ -5,12 +5,15 @@
 #include "utils.h"
 
 #ifdef __cplusplus
-extern "C"{
+extern "C" {
 #endif
 
-	void bubbleSort_naive(void *, size_t, size_t, int (*)(const void *, const void*) );
+void bubbleSort_naive(void *,
+                      size_t,
+                      size_t,
+                      int (*)(const void *, const void *));
 
-	void bubbleSort(void *, size_t, size_t, int (*)(const void *, const void*) );
+void bubbleSort(void *, size_t, size_t, int (*)(const void *, const void *));
 
 #ifdef __cplusplus
 }

@@ -5,10 +5,10 @@
 #include "utils.h"
 
 #ifdef __cplusplus
-extern "C"{
+extern "C" {
 #endif
 
-	void heapSort(void *, size_t, size_t, int (*)(const void *, const void *) );
+void heapSort(void *, size_t, size_t, int (*)(const void *, const void *));
 
 #ifdef __cplusplus
 }

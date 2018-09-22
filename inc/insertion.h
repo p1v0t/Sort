@@ -4,10 +4,10 @@
 #include "utils.h"
 
 #ifdef __cplusplus
-extern "C"{
+extern "C" {
 #endif
 
-	void insertionSort(void *, size_t, size_t, int (*)(const void *,const void *) );
+void insertionSort(void *, size_t, size_t, int (*)(const void *, const void *));
 
 #ifdef __cplusplus
 }

@@ -5,11 +5,15 @@
 #include "utils.h"
 
 #ifdef __cplusplus
-extern "C"{
+extern "C" {
 #endif
 
-	void merge(void *, size_t, size_t, size_t, int (*)(const void *, const void*) );
-	void mergeSort(void *, size_t, size_t, size_t, int (*)(const void *, const void*) );
+void merge(void *, size_t, size_t, size_t, int (*)(const void *, const void *));
+void mergeSort(void *,
+               size_t,
+               size_t,
+               size_t,
+               int (*)(const void *, const void *));
 
 #ifdef __cplusplus
 }

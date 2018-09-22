@@ -9,7 +9,7 @@
 typedef uint8_t byte;
 
 #ifdef __cplusplus
-extern "C"{
+extern "C" {
 #endif
 
 
@@ -21,9 +21,9 @@ extern "C"{
 #define false 0
 #endif
 
-	extern inline void swap(unsigned char *, unsigned char *, size_t size);
+extern inline void swap(unsigned char *, unsigned char *, size_t size);
 
-	extern inline void copy(void *, void *, size_t );
+extern inline void copy(void *, void *, size_t);
 
 #ifdef __cplusplus
 }
