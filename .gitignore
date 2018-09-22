@@ -1,4 +1,6 @@
 ### CMake ###
+CMakeLists.txt.*
+build/
 CMakeCache.txt
 CMakeFiles
 CMakeScripts
