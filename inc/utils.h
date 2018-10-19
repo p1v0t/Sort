@@ -14,11 +14,11 @@ extern "C" {
 
 
 #ifndef true
-#define true 1
+#define true (0==0)
 #endif
 
 #ifndef false
-#define false 0
+#define false !(true)
 #endif
 
 extern inline void swap(unsigned char *, unsigned char *, size_t size);
