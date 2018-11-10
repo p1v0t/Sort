@@ -1,4 +1,4 @@
-
+	
 #include <stdio.h>
 #include <stdlib.h>
 #include "qsortL.h"
@@ -11,7 +11,7 @@ static int cmp(const void *a, const void *b)
 		return -1;
 	if ( ((Country *)a)-> m > ((Country *)b)-> m)
 		return 1;
-	else 
+	else
 		return 0;
 }
 
@@ -30,16 +30,21 @@ int main(void)
 
 	for(i =0; !feof(f); i++)
 		fscanf(f, "%s%ld" ,gdpRank[i].n, &gdpRank[i].m);
-	
-	qsortL(gdpRank, 0, i, sizeof(Country), cmp);
+
+	qsortL(gdpRank, 1, i, sizeof(Country), cmp);
 
 	//source : http://databank.worldbank.org/data/download/GDP.pdf
 
-	fprintf(o,"\n\n%s\n\n","---------------Gross Domestic Product 2015---------------");
-	fprintf(o,"\n%s%11s%40s\n\n\n","Rank"," Economy", "(millions of Economy US dollars)");
+	char header[120];
+	sprintf(header,"\n\n%s\n\n","---------------Gross Domestic Product 2015---------------");
+	sprintf(header + strlen(header),"\n%s%11s%40s\n\n\n","Rank"," Economy", "(millions of Economy US dollars)");
+	fprintf(o, header);
+	printf(header);
 
-	for(j =0; j <i; j++)		
+	for(j =0; j < (i+1); j++) {
 		fprintf(stdout,"%-7zu %-27s %ld\n", j, gdpRank[j].n, gdpRank[j].m);
+		fprintf(o,"%-7zu %-27s %ld\n", j, gdpRank[j].n, gdpRank[j].m);
+	}
 
 	fclose(o);
 	fclose(f);
