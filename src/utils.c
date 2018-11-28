@@ -1,6 +1,6 @@
 #include "utils.h"
 
-extern inline void swap(byte *x, byte *y, size_t size)
+extern void swap(byte *x, byte *y, size_t size)
 {
   while(size-- > 0) {
     byte tmp = *x;
@@ -9,7 +9,7 @@ extern inline void swap(byte *x, byte *y, size_t size)
   }
 }
 
-extern inline void copy(void *x, void *y, size_t size)
+extern void copy(void *x, void *y, size_t size)
 {
   while(size-- > 0) {
     byte *pbTo = (byte *)x;

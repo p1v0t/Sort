@@ -6,8 +6,8 @@ size_t LomutoPartition(void *base,
                        size_t size,
                        int (*cmp)(const void *, const void *))
 {
-  char *ptr = (char *)base;
-  char *p = ptr + hi * size;
+  byte *ptr = (byte *)base;
+  byte *p = ptr + hi * size;
 
   int i = lo - 1;
   size_t j;

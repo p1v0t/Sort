@@ -1,6 +1,6 @@
 ### CMake ###
 CMakeLists.txt.*
-build/
+[Bb]uild/
 CMakeCache.txt
 CMakeFiles
 CMakeScripts

@@ -23,7 +23,7 @@ To see empirical implementation correctness tests, go to test/ directory and run
 ```shell
 $ mkdir build && cd build
 $ cmake ..
-$ make
+$ cmake --build .
 ```
  ------
 

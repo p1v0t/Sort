@@ -14,16 +14,16 @@ extern "C" {
 
 
 #ifndef true
-#define true (0==0)
+#define true 1
 #endif
 
 #ifndef false
 #define false !(true)
 #endif
 
-extern inline void swap(unsigned char *, unsigned char *, size_t size);
+extern void swap(byte *, byte *, size_t);
 
-extern inline void copy(void *, void *, size_t);
+extern void copy(void *, void *, size_t);
 
 #ifdef __cplusplus
 }

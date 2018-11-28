@@ -20,8 +20,7 @@ void merge(void *base,
   for(k = lo; k <= hi; k++)
     copy(auxp + k * size, pbBase + k * size, size);
 
-  for(k = lo; k <= hi; k++)
-
+  for(k = lo; k <= hi; k++) {
     if(i > mid)
       copy(pbBase + k * size, auxp + (j++) * size, size);
 
@@ -33,6 +32,7 @@ void merge(void *base,
 
     else
       copy(pbBase + k * size, auxp + (i++) * size, size);
+  }
 
   free(aux);
 }
