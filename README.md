@@ -1,3 +1,6 @@
+[![GitHub forks](https://img.shields.io/github/forks/p1v0t/Sort.svg?style=flat-square)](https://github.com/p1v0t/Sort/network)
+[![GitHub stars](https://img.shields.io/github/stars/p1v0t/Sort.svg?style=flat-square)](https://github.com/p1v0t/Sort/stargazers)
+
 # Sort
 Some of comparision based sorting algorithms implemented in generic form using C
 
