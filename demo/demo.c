@@ -1,53 +1,64 @@
-	
+
 #include <stdio.h>
 #include <stdlib.h>
-#include "qsortL.h"
+#include "qsort3way.h"
 
-typedef struct country {char n[50]; long m;} Country;
+typedef struct country {
+  char n[50];
+  long m;
+} Country;
 
 static int cmp(const void *a, const void *b)
 {
-	if ( ((Country *)a)-> m < ((Country *)b)-> m)
-		return -1;
-	if ( ((Country *)a)-> m > ((Country *)b)-> m)
-		return 1;
-	else
-		return 0;
+  if(((const Country *)a)->m < ((const Country *)b)->m) return -1;
+  if(((const Country *)a)->m > ((const Country *)b)->m)
+    return +1;
+  else
+    return 0;
 }
 
 int main(void)
 {
-	FILE *f, *o;
-	Country gdpRank[195];
+  const int NUMLINES = 194;
+  Country gdpRank[NUMLINES];
 
-	size_t i, j;
+  FILE *o = NULL;
+  if(!(o = fopen("out.dat", "w")))
+    fprintf(stderr, "file couldn't opened %d\n", __LINE__);
 
-	if(!(o =fopen("out.dat", "w") ) )
-		fprintf(stderr,"file couldn't opened %d\n", __LINE__);
+  FILE *f = NULL;
+  if(!(f = fopen("GDP.dat", "r")))
+    fprintf(stderr, "file couldn't opened %d\n", __LINE__);
 
-	if(!(f =fopen("GDP.dat", "r") ) )
-		fprintf(stderr,"file couldn't opened %d\n", __LINE__);
+  {
+    size_t i = 0;
+    do {
+      fscanf(f, "%s%ld", gdpRank[i].n, &gdpRank[i].m);
+      ++i;
+    } while(!feof(f));
+  }
 
-	for(i =0; !feof(f); i++)
-		fscanf(f, "%s%ld" ,gdpRank[i].n, &gdpRank[i].m);
+  qsort3way(gdpRank, NUMLINES, sizeof(Country), cmp);
 
-	qsortL(gdpRank, 1, i, sizeof(Country), cmp);
+  // source : http://databank.worldbank.org/data/download/GDP.pdf
 
-	//source : http://databank.worldbank.org/data/download/GDP.pdf
+  fprintf(o, "\n\n%s\n\n",
+          "---------------Gross Domestic Product 2015---------------");
+  fprintf(stdout, "\n\n%s\n\n",
+          "---------------Gross Domestic Product 2015---------------");
 
-	char header[120];
-	sprintf(header,"\n\n%s\n\n","---------------Gross Domestic Product 2015---------------");
-	sprintf(header + strlen(header),"\n%s%11s%40s\n\n\n","Rank"," Economy", "(millions of Economy US dollars)");
-	fprintf(o, header);
-	printf(header);
+  fprintf(o, "\n%s%11s%40s\n\n\n", "Rank", " Economy",
+          "(millions of Economy US dollars)");
+  fprintf(stdout, "\n%s%11s%40s\n\n\n", "Rank", " Economy",
+          "(millions of Economy US dollars)");
 
-	for(j =0; j < (i+1); j++) {
-		fprintf(stdout,"%-7zu %-27s %ld\n", j, gdpRank[j].n, gdpRank[j].m);
-		fprintf(o,"%-7zu %-27s %ld\n", j, gdpRank[j].n, gdpRank[j].m);
-	}
+  for(size_t i = 0; i < NUMLINES; ++i) {
+    fprintf(stdout, "%-7zu %-27s %ld\n", i, gdpRank[i].n, gdpRank[i].m);
+    fprintf(o, "%-7zu %-27s %ld\n", i, gdpRank[i].n, gdpRank[i].m);
+  }
 
-	fclose(o);
-	fclose(f);
+  fclose(o);
+  fclose(f);
 
-	return 0;
+  return 0;
 }
