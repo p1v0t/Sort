@@ -2,15 +2,15 @@
 [![GitHub stars](https://img.shields.io/github/stars/p1v0t/Sort.svg?style=flat-square)](https://github.com/p1v0t/Sort/stargazers)
 
 # Sort
-Some of comparision based sorting algorithms implemented in generic form using C
+Some of comparision based sorting algorithms implemented in generic form using C programming language.
 
 ## Usage
-You can use any of these implementation by including to the source. Most of algorithms implemented std qsort() fashion
-``` void qsort( void *ptr, size_t count, size_t size, int (*cmp)(const void *, const void *) ) ```
+You can use any of these implementation by including to the source. Most of algorithms implemented `std qsort()` fashion
+` void qsort( void *ptr, size_t count, size_t size, int (*cmp)(const void *, const void *) ) `
  
-If you want to use insertion sort for example, you should try
+If you want to use insertion sort, you should try:
 
-``` void insertionSort( void *ptr, size_t count, size_t size, int (*cmp)(const void *, const void *) ) ```
+` void insertionSort( void *ptr, size_t count, size_t size, int (*cmp)(const void *, const void *) )`
 
 where
 
@@ -20,13 +20,11 @@ where
 - `cmp` is comparision function, an function pointer that takes two const
  pointer to void and return an integer -1, +1, 0 similar to `strcmp`
 
-
-To see empirical implementation correctness tests, go to test/ directory and run following commands:
-
+Build demos and tests with:
 ```shell
-$ mkdir build && cd build
-$ cmake ..
-$ cmake --build .
+$ git clone git@github.com:p1v0t/Sort.git
+$ cmake -SSort -Bbuild
+$ cmake --build build
 ```
  ------
 
