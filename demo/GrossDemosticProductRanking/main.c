@@ -10,9 +10,9 @@ typedef struct country {
 
 static int cmp(const void *a, const void *b)
 {
-  if(((const Country *)a)->m < ((const Country *)b)->m) return -1;
+  if(((const Country *)a)->m < ((const Country *)b)->m) return +1;
   if(((const Country *)a)->m > ((const Country *)b)->m)
-    return +1;
+    return -1;
   else
     return 0;
 }
