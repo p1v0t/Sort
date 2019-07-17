@@ -13,7 +13,7 @@ size_t LomutoPartition(void *base,
   size_t j;
 
   for(j = lo; j < hi; j++)
-    if(cmp(ptr + j * size, p) > 0)
+    if(cmp(ptr + j * size, p) <= 0)
       swap(ptr + (++i) * size, ptr + j * size, size);
 
   swap(ptr + (i + 1) * size, ptr + j * size, size);

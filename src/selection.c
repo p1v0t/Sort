@@ -14,7 +14,7 @@ void selectionSort(void *base,
       m = i;
 
       for(j = i + 1; j < num; j++)
-        if(cmp(pvBase + j * size, pvBase + m * size) > 0) m = j;
+        if(cmp(pvBase + j * size, pvBase + m * size) < 0) m = j;
 
       swap(pvBase + i * size, pvBase + m * size, size);
     }

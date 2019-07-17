@@ -13,7 +13,7 @@ void cocktailShakerSort(void *base,
     do {
       swapped = false;
       for(i = 0; i < num - 2; i++)
-        if(cmp(pbBase + (i + 1) * size, pbBase + i * size) > 0) {
+        if(cmp(pbBase + (i + 1) * size, pbBase + i * size) < 0) {
           swap(pbBase + (i + 1) * size, pbBase + i * size, size);
           swapped = true;
         }
@@ -22,7 +22,7 @@ void cocktailShakerSort(void *base,
 
       swapped = false;
       for(i = num - 2; i > 0; i--)
-        if(cmp(pbBase + (i + 1) * size, pbBase + i * size) > 0) {
+        if(cmp(pbBase + (i + 1) * size, pbBase + i * size) < 0) {
           swap(pbBase + (i + 1) * size, pbBase + i * size, size);
           swapped = true;
         }

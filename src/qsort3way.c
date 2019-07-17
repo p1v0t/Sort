@@ -13,11 +13,11 @@ void qsort3way(void *base,
     int i = 1, lt = 0, gt = n;
     while(i < gt) {
       int c = cmp(ptr + lt * size, ptr + i * size);
-      if(c < 0) {
+      if(c > 0) {
         swap(ptr + lt * size, ptr + i * size, size);
         lt++;
         i++;
-      } else if(c > 0) {
+      } else if(c < 0) {
         gt--;
         swap(ptr + i * size, ptr + gt * size, size);
       } else {

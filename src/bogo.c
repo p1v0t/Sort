@@ -29,7 +29,7 @@ int sorted(void *base,
   num -= 1;
 
   while(num) {
-    if(cmp(ptr + (num - 1) * size, ptr + (num)*size) < 0) return false;
+    if(cmp(ptr + (num - 1) * size, ptr + (num)*size) > 0) return false;
     num--;
   }
 

@@ -14,9 +14,9 @@ size_t partition(void *base,
   size_t j = hi + 1;
 
   while(true) {
-    while(cmp(pbBase + (++i) * size, v + lo * size) > 0)
+    while(cmp(pbBase + (++i) * size, v + lo * size) < 0)
       if(i == hi) break;
-    while(cmp(v + lo * size, pbBase + (--j) * size) > 0)
+    while(cmp(v + lo * size, pbBase + (--j) * size) < 0)
       if(j == lo) break;
     if(i >= j) break;
     swap(pbBase + i * size, pbBase + j * size, size);

@@ -15,7 +15,7 @@ void shellSort(void *base,
 
     while(h >= 1) {
       for(i = 1; i < num; i++)
-        for(j = i; j > 0 && cmp(pbBase + j * size, pbBase + (j - 1) * size) > 0;
+        for(j = i; j > 0 && cmp(pbBase + j * size, pbBase + (j - 1) * size) < 0;
             j--)
           swap(pbBase + j * size, pbBase + (j - 1) * size, size);
       h /= 3;

@@ -13,7 +13,7 @@ void bubbleSort_naive(void *base,
   if(num)
     for(i = 0; i < num; i++)
       for(j = 0; j < num - i; j++)
-        if(cmp(pbBase + (j + 1) * size, pbBase + j * size) > 0)
+        if(cmp(pbBase + (j + 1) * size, pbBase + j * size) < 0)
           swap(pbBase + (j + 1) * size, pbBase + j * size, size);
 }
 
@@ -32,7 +32,7 @@ void bubbleSort(void *base,
     for(i = 0; i < num; i++) {
       sorted = true;
       for(j = 0; j < num - i; j++) {
-        if(cmp(pbBase + (j + 1) * size, pbBase + j * size) > 0) {
+        if(cmp(pbBase + (j + 1) * size, pbBase + j * size) < 0) {
           swap(pbBase + (j + 1) * size, pbBase + j * size, size);
           sorted = false;
         }
