@@ -1,5 +1,5 @@
-#ifndef QUICKL_H
-#define QUICKL_H
+#ifndef QSORTL_H
+#define QSORTL_H
 
 #include <stddef.h>
 #include "utils.h"
@@ -14,11 +14,11 @@ size_t partition(void *,
                  size_t,
                  int (*)(const void *, const void *));
 
-void quickSortL(void *,
-                size_t,
-                size_t,
-                size_t,
-                int (*)(const void *, const void *));
+void qsortL(void *,
+            size_t,
+            size_t,
+            size_t,
+            int (*)(const void *, const void *));
 
 
 #ifdef __cplusplus
