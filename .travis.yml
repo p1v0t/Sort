@@ -1,7 +1,7 @@
 language: c
 branches: 
    only:
-       - travisIntegration
+       - master
 compiler: gcc
 
 before_script:
