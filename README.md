@@ -1,5 +1,4 @@
-[![GitHub forks](https://img.shields.io/github/forks/p1v0t/Sort.svg?style=flat-square)](https://github.com/p1v0t/Sort/network)
-[![GitHub stars](https://img.shields.io/github/stars/p1v0t/Sort.svg?style=flat-square)](https://github.com/p1v0t/Sort/stargazers)
+[![Build Status](https://travis-ci.org/p1v0t/Sort.svg?branch=master)](https://travis-ci.org/p1v0t/Sort)
 
 # Sort
 Some of comparision based sorting algorithms implemented in generic form using C programming language.
