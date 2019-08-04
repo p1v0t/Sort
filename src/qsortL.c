@@ -7,13 +7,13 @@ size_t LomutoPartition(void *base,
                        int (*cmp)(const void *, const void *))
 {
   byte *ptr = (byte *)base;
-  byte *p = ptr + hi * size;
+  byte *p = ptr + (hi * size);
 
   int i = lo - 1;
   size_t j;
 
   for(j = lo; j < hi; j++)
-    if(cmp(ptr + j * size, p) <= 0)
+    if(cmp(p, ptr + j * size) <= 0)
       swap(ptr + (++i) * size, ptr + j * size, size);
 
   swap(ptr + (i + 1) * size, ptr + j * size, size);
